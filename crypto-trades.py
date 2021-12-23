@@ -11,7 +11,7 @@ def main():
             retries = -1,
             # candle_interval = '1h',
             channels=[TRADES],
-            symbols=['BTC-USDT','ETH-USDT','SOL-USDT',"MATIC-USDT"],
+            symbols=['BTC-USDT','ETH-USDT','SOL-USDT',],
             callbacks={
                 TRADES: TradeMongo('binance', collections='trades'),
                 # CANDLES: CandlesMongo('binance', collection='candles')
@@ -23,7 +23,7 @@ def main():
         Coinbase(
             retries = -1,
             channels=[TRADES],
-            symbols=['BTC-USD','ETH-USD','SOL-USD','MATIC-USD'],
+            symbols=['BTC-USD','ETH-USD',],
             callbacks={
                 TRADES: TradeMongo('coinbase', collections='trades'),
             }
